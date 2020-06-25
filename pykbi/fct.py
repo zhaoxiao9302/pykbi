@@ -140,9 +140,9 @@ class KBdata3comp:
         Calculate the properties using the KB coeffs
         """
 
-        D12 = self.G11 * self.G22 - 2.0 * self.G12
-        D13 = self.G11 * self.G33 - 2.0 * self.G13
-        D23 = self.G22 * self.G33 - 2.0 * self.G23
+        D12 = self.G11 + self.G22 - 2.0 * self.G12
+        D13 = self.G11 + self.G33 - 2.0 * self.G13
+        D23 = self.G22 + self.G33 - 2.0 * self.G23
 
         D123 = self.G11 * self.G22 + self.G11 * self.G33 \
         + self.G22 * self.G33 + 2.0 * self.G12 * self.G13 \
